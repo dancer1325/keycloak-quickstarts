@@ -5,9 +5,13 @@ metadata:
 spec:
   tls:
     - hosts:
-        - KEYCLOAK_HOST
+        # replace by your key cloack host
+        #- KEYCLOAK_HOST
+        - keycloak.localhost
   rules:
-    - host: KEYCLOAK_HOST
+    # replace by your key cloack host
+    #- host: KEYCLOAK_HOST
+    - host: keycloak.localhost
       http:
         paths:
           - path: /

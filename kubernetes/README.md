@@ -24,6 +24,6 @@
 
 # how to deploy | Kubernetes locally?
 * | this path,
-  * `kubectl apply -f keycloack.yaml`
-  * `kubectl apply -f keycloack-ingress.yaml`
-    * TODO: do I need it?
+  * `kubectl apply -f keycloak.yaml`
+  * `kubectl apply -f keycloak-ingress.yaml`
+    * TODO: do I need it? it requires an ingress controller
