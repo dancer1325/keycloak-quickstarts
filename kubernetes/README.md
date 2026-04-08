@@ -21,9 +21,23 @@
     * minikube
       * `minikube start`
     * microk8s
+## recommendations
+* `kind create cluster`
+* [install Cloud Provider KIND](https://kubernetes-sigs.github.io/cloud-provider-kind/#/?id=main)
+* `sudo cloud-provider-kind`
+  * == run cloud-provider-kind
 
 # how to deploy | Kubernetes locally?
 * | this path,
-  * `kubectl apply -f keycloak.yaml`
   * `kubectl apply -f keycloak-ingress.yaml`
-    * TODO: do I need it? it requires an ingress controller
+* `PORT=$(docker ps --format '{{.Ports}}' -f name=kindccm-gw | grep -o '0.0.0.0:[0-9]*->80' | cut -d: -f2 | cut -d- -f1)`
+  * extract real ingress' port | variable
+  * `echo $PORT`
+    * check ingress' real port
+* | [keycloak.yaml](keycloak.yaml)
+  * set KC_HOSTNAME / real value
+* | this path,
+  * `kubectl apply -f keycloak.yaml`
+* | browser,
+  * [keycloak.yaml](keycloak.yaml)'s `KC_HOSTNAME` value
+    * _Example:_ http://keycloak.localhost:32778
