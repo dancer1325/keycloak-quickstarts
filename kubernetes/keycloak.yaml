@@ -71,7 +71,7 @@ spec:
             - name: KC_HOSTNAME
               # specify real ingress' port
               # value: "http://keycloak.localhost:<PORT>"
-              value: "http://keycloak.localhost:32778"
+              value: "http://keycloak.localhost:32768"
             - name: KC_HEALTH_ENABLED
               value: "true"
             - name: 'KC_CACHE'

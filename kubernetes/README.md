@@ -41,3 +41,5 @@
 * | browser,
   * [keycloak.yaml](keycloak.yaml)'s `KC_HOSTNAME` value
     * _Example:_ http://keycloak.localhost:32778
+      * user: admin
+      * password: admin
